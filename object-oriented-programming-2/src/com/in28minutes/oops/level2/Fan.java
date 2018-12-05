@@ -17,6 +17,20 @@ public class Fan {
 		this.color = color;
 	}
 
+	public void switchOn() {
+		this.isOn = true;
+		this.speed = 5;
+	}
+
+	public void switchOff() {
+		this.isOn = false;
+		this.speed = 0;
+	}
+
+	public void setSpeed(int speed) {
+		this.speed = speed;
+	}
+
 	// to print the values of class
 	@Override
 	public String toString() {
