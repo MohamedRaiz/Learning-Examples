@@ -1,0 +1,138 @@
+<html>
+<head>
+<title>Developer's View</title>
+
+<link rel="stylesheet" type="text/css" href="../styles/Choose.css"/> <!-- must change this part -->
+</head>
+
+<body>
+	<h1>Developer's View :</h1>
+<div class="tab">
+	<button class="tablinks" onclick="openCity(event, 'Event')"><b>Event</b></button>
+	<button class="tablinks" onclick="openCity(event, 'User')"><b>User</b></button>
+</div>
+
+<div id="Event" class="tabcontent">
+	<div id="twoCol">
+	<div id="shader" class="column left">
+		<h2>Add a New Event:</h2>
+		<form method="post" action="AddEvent">
+			<label><b>Title :</b><input type="text" name="title"></label> <br>
+			<a href="GetEvents">Get All Events</a>
+			<label><b>Location :</b><input type="text" name="location"></label> <br> 
+			<label><b>ScreenDate :</b><input type="text" name="date"></label> <br>
+			<label><b>Price :</b><input type="number" name="price" min="0.01" step="0.01"></label> <br>
+			<input type="submit" value="Submit" name="submit">
+		</form>
+	</div>
+	<div id="shader" class="column right">
+		<h2>Remove an Event:</h2>
+		<form method="post" action="AddEvent"> <!-- must change this part -->
+			<label><b>Title :</b><input type="text" name="title"></label> <br>
+			<a href="GetEvents">Get All Events</a>
+			<label><b>Location :</b><input type="text" name="location"></label> <br> 
+			<label><b>ScreenDate :</b><input type="text" name="date"></label> <br>
+			<label><b>Event Id :</b><input type="number" name="id" min="1" step="1"></label> <br>
+			<input type="submit" value="Submit" name="submit">
+		</form>
+	</div>	
+	</div>
+	
+	<div id ="twoCol">
+	<div id="shader" class="bottom column left">
+		<h2>Update an Event:</h2>
+		<form method="post" action="AddUser"> <!-- must change this part -->
+			<label><b>Title :</b><input type="text" name="title"></label> <br>
+			<a href="GetEvents">Get All Events</a>
+			<label><b>Location :</b><input type="text" name="location"></label> <br> 
+			<label><b>ScreenDate :</b><input type="text" name="date"></label> <br>
+			<label><b>Price :</b><input type="number" name="price" min="0.01" step="0.01"></label> <br>
+			<label><b>Event Id :</b><input type="number" name="id" min="1" step="1"></label> <br>
+			<input type="submit" value="Submit" name="submit">
+		</form>	
+	
+	</div>
+	<div id="shader" class="bottom column left">
+		<h2>Get an Event:</h2>
+		<form method="post" action="AddUser"> <!-- must change this part -->
+			<label>Email <input type="text" name="email"></label> 
+			<label>Password <input type="text" name="password"></label> 
+			<label><b>Event Id :</b><input type="number" name="id" min="1" step="1"></label> <br>
+			<input type="submit" value="Submit" name="submit">
+		</form>	
+		
+	</div>
+		
+	</div>
+	</div> <!-- this is for tab div (div id="Event" class="tabcontent") -->
+	
+	<div id="User" class="tabcontent">
+	<div id="twoCol">
+	<div id="shader" class="column left">
+		<h2>Add a New User:</h2>
+		<form method="post" action="AddEvent"> <!-- must change this part -->
+			<label>Email <input type="text" name="email"></label> 
+			<label>Password <input type="text" name="password"></label> 
+			<input type="submit" value="Submit" name="submit">
+		</form>
+	</div>
+	<div id="shader" class="column right">
+		<h2>Remove a User:</h2>
+		<form method="post" action="AddEvent"> <!-- must change this part -->
+			<label>Email <input type="text" name="email"></label> <br>
+			<label>Password <input type="text" name="password"></label> <br>
+			<label>User Id <input type="text" name="password"></label> 
+			<input type="submit" value="Submit" name="submit">
+		</form>
+	</div>	
+	</div>
+	
+	<div id ="twoCol">
+	<div id="shader" class="bottom column left">
+		<h2>Update a User:</h2>
+		<form method="post" action="AddUser"> <!-- must change this part -->
+			<label>Email <input type="text" name="email"></label> <br>
+			<label>Password <input type="text" name="password"></label><br> 
+			<label>User Id <input type="text" name="password"></label> 
+			<input type="submit" value="Submit" name="submit">
+		</form>	
+	
+	</div>
+	<div id="shader" class="bottom column left">
+		<h2>Get a User:</h2>
+		<form method="post" action="AddUser"> <!-- must change this part -->
+			<label>Email <input type="text" name="email"></label> <br>
+			<label>Password <input type="text" name="password"></label><br> 
+			<label>User Id <input type="text" name="password"></label> 
+			<input type="submit" value="Submit" name="submit">
+		</form>	
+		
+	</div>
+		
+	</div>
+	</div> <!-- this is for tab div (div id="Event" class="tabcontent") -->
+	
+<a href="GetEvents">Get All Events</a>
+	<a href="GetUsers">Show All Users</a>
+	
+	
+	
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+
+</body>
+</html>
+

@@ -1,0 +1,87 @@
+@charset "ISO-8859-1";
+
+
+body {
+  background-image: url("../Pictures/dev.jpg");
+}
+
+h1 {
+	font-size: 50px;
+	text-align:center;
+	border-style: solid;	
+	margin: 30px;
+	background: rgba(247, 249, 248, 0.26);
+}
+
+h2 {
+	font-size: 30px;
+    text-decoration: underline;
+    color: honeydew;
+}
+
+input{
+	margin:10px;
+}
+
+label {
+	font-size: 20px;
+    color: #cbe0e8;
+    padding: 10px;
+}
+
+#shader{
+	background: rgba(62, 62, 62, 0.55);
+}
+
+.column {
+	float: left;
+  padding: 10px;
+  height: 300px; 
+  margin: 20px;
+}
+
+
+.left {
+  width: 45%;
+  border-style: solid;
+}
+
+.right {
+  width: 45%;
+  border-style: solid;
+}
+
+
+#twoCol {
+	 box-sizing: border-box;
+	
+}
+
+a {
+	float: right;
+	background: #e4acac;
+	border-radius: 8px;
+	font-size: 30px;
+	color: #dc1b1b
+}
+
+
+
+/* Tabs Below*/
+.tabLinks {
+	font-size: 35px;
+    background: gray;
+    font-style: italic;
+    font-family: arial;
+    border-radius: 7px;
+    margin-left: 20px;
+}
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}

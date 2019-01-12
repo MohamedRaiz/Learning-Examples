@@ -1,0 +1,11 @@
+package com.In28minutes.firstjavaproject;
+
+public class MultiplicationTableRunner {
+
+	public static void main(String[] args) {
+
+		MultiplicationTable table = new MultiplicationTable();
+		table.multiplePrinter();
+
+	}
+}
