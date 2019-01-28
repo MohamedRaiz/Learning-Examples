@@ -26,7 +26,7 @@ public class StudentsCollectionRunner {
 
 		System.out.println(studentsAl);
 
-		Collections.sort(studentsAl);// can only pass in arraylist with those classes that implements the comparable
+		Collections.sort(studentsAl); // can only pass in arraylist with those classes that implements the comparable
 										// interface. Integer and string class automatically implements it already by
 										// default. So now must implement comparable interface in student
 
